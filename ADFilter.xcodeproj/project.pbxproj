@@ -12,7 +12,34 @@
 		CEDD9A63211BD35B00CBCD4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A61211BD35B00CBCD4A /* Main.storyboard */; };
 		CEDD9A65211BD35C00CBCD4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A64211BD35C00CBCD4A /* Assets.xcassets */; };
 		CEDD9A68211BD35C00CBCD4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A66211BD35C00CBCD4A /* LaunchScreen.storyboard */; };
+		CEDD9A76211BD62300CBCD4A /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A75211BD62300CBCD4A /* blockerList.json */; };
+		CEDD9A78211BD62300CBCD4A /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD9A77211BD62300CBCD4A /* ContentBlockerRequestHandler.swift */; };
+		CEDD9A7C211BD62300CBCD4A /* blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEDD9A73211BD62300CBCD4A /* blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDD9A7A211BD62300CBCD4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDD9A52211BD35B00CBCD4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDD9A72211BD62300CBCD4A;
+			remoteInfo = blocker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEDD9A80211BD62300CBCD4A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CEDD9A7C211BD62300CBCD4A /* blocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CEDD9A5A211BD35B00CBCD4A /* ADFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,22 @@
 		CEDD9A64211BD35C00CBCD4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDD9A67211BD35C00CBCD4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDD9A69211BD35C00CBCD4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDD9A73211BD62300CBCD4A /* blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = blocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDD9A75211BD62300CBCD4A /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		CEDD9A77211BD62300CBCD4A /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		CEDD9A79211BD62300CBCD4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDD9A81211C270400CBCD4A /* ADFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADFilter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CEDD9A57211BD35B00CBCD4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDD9A70211BD62300CBCD4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDD9A5C211BD35B00CBCD4A /* ADFilter */,
+				CEDD9A74211BD62300CBCD4A /* blocker */,
 				CEDD9A5B211BD35B00CBCD4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDD9A5A211BD35B00CBCD4A /* ADFilter.app */,
+				CEDD9A73211BD62300CBCD4A /* blocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +95,7 @@
 		CEDD9A5C211BD35B00CBCD4A /* ADFilter */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD9A81211C270400CBCD4A /* ADFilter.entitlements */,
 				CEDD9A5D211BD35B00CBCD4A /* AppDelegate.swift */,
 				CEDD9A5F211BD35B00CBCD4A /* ViewController.swift */,
 				CEDD9A61211BD35B00CBCD4A /* Main.storyboard */,
@@ -62,6 +104,16 @@
 				CEDD9A69211BD35C00CBCD4A /* Info.plist */,
 			);
 			path = ADFilter;
+			sourceTree = "<group>";
+		};
+		CEDD9A74211BD62300CBCD4A /* blocker */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD9A75211BD62300CBCD4A /* blockerList.json */,
+				CEDD9A77211BD62300CBCD4A /* ContentBlockerRequestHandler.swift */,
+				CEDD9A79211BD62300CBCD4A /* Info.plist */,
+			);
+			path = blocker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +126,34 @@
 				CEDD9A56211BD35B00CBCD4A /* Sources */,
 				CEDD9A57211BD35B00CBCD4A /* Frameworks */,
 				CEDD9A58211BD35B00CBCD4A /* Resources */,
+				CEDD9A80211BD62300CBCD4A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CEDD9A7B211BD62300CBCD4A /* PBXTargetDependency */,
 			);
 			name = ADFilter;
 			productName = ADFilter;
 			productReference = CEDD9A5A211BD35B00CBCD4A /* ADFilter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CEDD9A72211BD62300CBCD4A /* blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDD9A7D211BD62300CBCD4A /* Build configuration list for PBXNativeTarget "blocker" */;
+			buildPhases = (
+				CEDD9A6F211BD62300CBCD4A /* Sources */,
+				CEDD9A70211BD62300CBCD4A /* Frameworks */,
+				CEDD9A71211BD62300CBCD4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blocker;
+			productName = blocker;
+			productReference = CEDD9A73211BD62300CBCD4A /* blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +166,14 @@
 				ORGANIZATIONNAME = sunsheen;
 				TargetAttributes = {
 					CEDD9A59211BD35B00CBCD4A = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					CEDD9A72211BD62300CBCD4A = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -113,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				CEDD9A59211BD35B00CBCD4A /* ADFilter */,
+				CEDD9A72211BD62300CBCD4A /* blocker */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +208,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEDD9A71211BD62300CBCD4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDD9A76211BD62300CBCD4A /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +228,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEDD9A6F211BD62300CBCD4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDD9A78211BD62300CBCD4A /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDD9A7B211BD62300CBCD4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDD9A72211BD62300CBCD4A /* blocker */;
+			targetProxy = CEDD9A7A211BD62300CBCD4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CEDD9A61211BD35B00CBCD4A /* Main.storyboard */ = {
@@ -279,7 +383,9 @@
 		CEDD9A6D211BD35C00CBCD4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ADFilter/ADFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KGX46L2U6T;
 				INFOPLIST_FILE = ADFilter/Info.plist;
@@ -297,7 +403,9 @@
 		CEDD9A6E211BD35C00CBCD4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ADFilter/ADFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KGX46L2U6T;
 				INFOPLIST_FILE = ADFilter/Info.plist;
@@ -307,6 +415,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.dev.ADFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEDD9A7E211BD62300CBCD4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KGX46L2U6T;
+				INFOPLIST_FILE = blocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.dev.ADFilter.blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDD9A7F211BD62300CBCD4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KGX46L2U6T;
+				INFOPLIST_FILE = blocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.dev.ADFilter.blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +477,15 @@
 			buildConfigurations = (
 				CEDD9A6D211BD35C00CBCD4A /* Debug */,
 				CEDD9A6E211BD35C00CBCD4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDD9A7D211BD62300CBCD4A /* Build configuration list for PBXNativeTarget "blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDD9A7E211BD62300CBCD4A /* Debug */,
+				CEDD9A7F211BD62300CBCD4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

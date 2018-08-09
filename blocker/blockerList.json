@@ -1,0 +1,86 @@
+[
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "div.first-card-container,#logo,#bottom,div.ec_wise_ad,div.se-head-logo,div.page-banner,div.ads-item,div.blank-frame,div.rn-typeLargePics,div.rn-typeLargeVideo,div.rn-typeSmallPics"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": [
+                "m.baidu.com",
+                "www.baidu.com"
+            ]
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": "logo",
+            "if-domain": [
+                "m.baidu.com",
+                "www.baidu.com"
+            ]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "#share,div.afd-item"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": [
+                "news.baidu.com"
+            ]
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "resource-type": [
+                "script","image"
+            ],
+            "load-type": [
+                "third-party"
+            ],
+            "if-domain": [
+                "m.xxshu5.com",
+                "m.huanyue123.com",
+                "m.mxguan.com",
+                "m.x23us.com",
+                "m.shuquge.com",
+                "m.biqudu.com"
+            ]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "div.header,div.footer,div.footer-margin,center,table,iframe"
+        },
+        "trigger": {
+            "url-filter": "www.qyl"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "resource-type": [
+                "script",
+                "image"
+            ],
+            "load-type": [
+                "third-party"
+            ],
+            "if-domain":["www.qyl83.com"]
+        }
+    }
+]
