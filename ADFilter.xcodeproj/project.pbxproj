@@ -12,7 +12,6 @@
 		CEDD9A63211BD35B00CBCD4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A61211BD35B00CBCD4A /* Main.storyboard */; };
 		CEDD9A65211BD35C00CBCD4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A64211BD35C00CBCD4A /* Assets.xcassets */; };
 		CEDD9A68211BD35C00CBCD4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A66211BD35C00CBCD4A /* LaunchScreen.storyboard */; };
-		CEDD9A76211BD62300CBCD4A /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = CEDD9A75211BD62300CBCD4A /* blockerList.json */; };
 		CEDD9A78211BD62300CBCD4A /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD9A77211BD62300CBCD4A /* ContentBlockerRequestHandler.swift */; };
 		CEDD9A7C211BD62300CBCD4A /* blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEDD9A73211BD62300CBCD4A /* blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -42,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		96F9EA272137E52800B18B1F /* blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = blocker.entitlements; sourceTree = "<group>"; };
 		CEDD9A5A211BD35B00CBCD4A /* ADFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDD9A5D211BD35B00CBCD4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDD9A5F211BD35B00CBCD4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,6 @@
 		CEDD9A67211BD35C00CBCD4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDD9A69211BD35C00CBCD4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDD9A73211BD62300CBCD4A /* blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = blocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEDD9A75211BD62300CBCD4A /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		CEDD9A77211BD62300CBCD4A /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		CEDD9A79211BD62300CBCD4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDD9A81211C270400CBCD4A /* ADFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADFilter.entitlements; sourceTree = "<group>"; };
@@ -109,7 +108,7 @@
 		CEDD9A74211BD62300CBCD4A /* blocker */ = {
 			isa = PBXGroup;
 			children = (
-				CEDD9A75211BD62300CBCD4A /* blockerList.json */,
+				96F9EA272137E52800B18B1F /* blocker.entitlements */,
 				CEDD9A77211BD62300CBCD4A /* ContentBlockerRequestHandler.swift */,
 				CEDD9A79211BD62300CBCD4A /* Info.plist */,
 			);
@@ -175,6 +174,11 @@
 					};
 					CEDD9A72211BD62300CBCD4A = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,7 +216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDD9A76211BD62300CBCD4A /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = blocker/blocker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KGX46L2U6T;
 				INFOPLIST_FILE = blocker/Info.plist;
@@ -444,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = blocker/blocker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KGX46L2U6T;
 				INFOPLIST_FILE = blocker/Info.plist;

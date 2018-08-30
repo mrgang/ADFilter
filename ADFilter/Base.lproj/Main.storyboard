@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="70" width="375" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-dM-MEE">
-                                                <rect key="frame" x="0.0" y="5" width="172.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="5" width="105" height="40"/>
                                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="20"/>
                                                 <state key="normal" title="当前状态">
                                                     <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,8 +42,18 @@
                                                     <action selector="refreshState:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJM-TQ-vDK"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnf-lo-ebV">
+                                                <rect key="frame" x="135" y="5" width="105" height="40"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="20"/>
+                                                <state key="normal" title="在线更新">
+                                                    <color key="titleColor" red="0.0" green="0.5490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="downloadOnline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NeS-U4-8BA"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auY-Pz-QNd">
-                                                <rect key="frame" x="202.5" y="5" width="172.5" height="40"/>
+                                                <rect key="frame" x="270" y="5" width="105" height="40"/>
                                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="20"/>
                                                 <state key="normal" title="重新加载">
                                                     <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
